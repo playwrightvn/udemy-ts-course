@@ -37,6 +37,7 @@ test("Advance: Add personal notes", async ({ page }) => {
 
     await test.step("Vào trang Vnexpress lấy data", async () => {
         await page.goto('https://vnexpress.net/khoa-hoc', { waitUntil: 'domcontentloaded' });
+        console.log("what is this");
         titles = await page.locator('//h3[@class="title-news"]/a').allTextContents();
         contents = await page.locator('//p[@class="description"]/a').allTextContents();
         console.log(titles);
@@ -44,11 +45,13 @@ test("Advance: Add personal notes", async ({ page }) => {
 
     await test.step("Vào playwrightvn > Lesson 3", async () => {
         await page.goto('https://material.playwrightvn.com/');
+        console.log("what is this");
         await page.locator('//a[@href="04-xpath-personal-notes.html"]').click();
     })
 
     await test.step("Thêm mới 10 note có nội dung là tiêu đề và một phần ngắn", async () => {
         for (let i = 0; i < 10; i++) {
+            console.log("what is this");
             await page.locator('//input[@type="text" and @id="note-title"]').fill(titles[i]);
             await page.locator('//textarea[@id="note-content"]').fill(contents[i]);
             await page.locator('//button[@id="add-note"]').click();
