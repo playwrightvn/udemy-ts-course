@@ -40,4 +40,4 @@ Thực hành tạo các collection và API sau:
 - Sử dụng biến {{random...}}
 
 # Bài 5: Pre-request script
-- Pre-request script
+- Pre-request script sử dụng để set giá trị 
